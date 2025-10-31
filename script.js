@@ -414,6 +414,103 @@ document.addEventListener('keydown', (e) => {
     }
 });
 
+// ===== Image Viewer =====
+const imageViewerModal = document.getElementById('imageViewerModal');
+const imageViewerImg = document.getElementById('imageViewerImg');
+const imageViewerCaption = document.getElementById('imageViewerCaption');
+const imageViewerClose = document.getElementById('imageViewerClose');
+let currentImageIndex = 0;
+const screenshotImages = document.querySelectorAll('.screenshot-img');
+
+// فتح عارض الصور عند الضغط على أي صورة في الواجهات
+screenshotImages.forEach((img, index) => {
+    img.addEventListener('click', function() {
+        currentImageIndex = index;
+        openImageViewer(this);
+    });
+});
+
+function openImageViewer(img) {
+    imageViewerModal.classList.add('active');
+    imageViewerImg.src = img.src;
+    imageViewerCaption.textContent = img.alt;
+    document.body.style.overflow = 'hidden';
+}
+
+// إغلاق عارض الصور
+imageViewerClose.addEventListener('click', closeImageViewer);
+
+// أزرار التنقل
+const imageViewerPrev = document.getElementById('imageViewerPrev');
+const imageViewerNext = document.getElementById('imageViewerNext');
+
+imageViewerPrev.addEventListener('click', function(e) {
+    e.stopPropagation();
+    currentImageIndex = (currentImageIndex - 1 + screenshotImages.length) % screenshotImages.length;
+    openImageViewer(screenshotImages[currentImageIndex]);
+});
+
+imageViewerNext.addEventListener('click', function(e) {
+    e.stopPropagation();
+    currentImageIndex = (currentImageIndex + 1) % screenshotImages.length;
+    openImageViewer(screenshotImages[currentImageIndex]);
+});
+
+// إغلاق عند الضغط خارج الصورة
+imageViewerModal.addEventListener('click', function(e) {
+    if (e.target === imageViewerModal) {
+        closeImageViewer();
+    }
+});
+
+// التنقل بين الصور والإغلاق بزر Escape
+document.addEventListener('keydown', function(e) {
+    if (imageViewerModal.classList.contains('active')) {
+        if (e.key === 'Escape') {
+            closeImageViewer();
+        } else if (e.key === 'ArrowRight') {
+            // في RTL، السهم الأيمن يذهب للصورة السابقة
+            currentImageIndex = (currentImageIndex - 1 + screenshotImages.length) % screenshotImages.length;
+            openImageViewer(screenshotImages[currentImageIndex]);
+        } else if (e.key === 'ArrowLeft') {
+            // في RTL، السهم الأيسر يذهب للصورة التالية
+            currentImageIndex = (currentImageIndex + 1) % screenshotImages.length;
+            openImageViewer(screenshotImages[currentImageIndex]);
+        }
+    }
+});
+
+function closeImageViewer() {
+    imageViewerModal.classList.remove('active');
+    document.body.style.overflow = '';
+}
+
+// دعم اللمس للتنقل بين الصور
+let touchStartXViewer = 0;
+let touchEndXViewer = 0;
+
+imageViewerImg.addEventListener('touchstart', (e) => {
+    touchStartXViewer = e.changedTouches[0].screenX;
+});
+
+imageViewerImg.addEventListener('touchend', (e) => {
+    touchEndXViewer = e.changedTouches[0].screenX;
+    handleViewerSwipe();
+});
+
+function handleViewerSwipe() {
+    if (touchEndXViewer < touchStartXViewer - 50) {
+        // Swipe left - الصورة التالية
+        currentImageIndex = (currentImageIndex + 1) % screenshotImages.length;
+        openImageViewer(screenshotImages[currentImageIndex]);
+    }
+    if (touchEndXViewer > touchStartXViewer + 50) {
+        // Swipe right - الصورة السابقة
+        currentImageIndex = (currentImageIndex - 1 + screenshotImages.length) % screenshotImages.length;
+        openImageViewer(screenshotImages[currentImageIndex]);
+    }
+}
+
 // ===== Console Message =====
 console.log('%c منظومة المهندس ', 'background: #2563eb; color: white; font-size: 20px; padding: 10px;');
 console.log('%c نظام محاسبي متكامل ', 'font-size: 14px; color: #2563eb;');

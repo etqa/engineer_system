@@ -55,6 +55,9 @@
                     <a href="#screenshots" class="nav-link">الواجهات</a>
                     <a href="#pricing" class="nav-link">الأسعار</a>
                     <a href="#contact" class="nav-link">تواصل معنا</a>
+                    <a href="https://www.youtube.com/@%D8%AE%D8%A7%D9%84%D8%AF%D8%A7%D9%84%D9%86%D9%88%D9%8A%D8%B5%D8%B1%D9%8A" class="nav-link" target="_blank">
+                        <i class="fab fa-youtube"></i> دروس تعليمية
+                    </a>
                 </div>
                 <div class="nav-actions">
                     <button class="menu-toggle" id="menuToggle">
@@ -92,6 +95,10 @@
                             class="btn btn-primary btn-lg">
                             <i class="fas fa-download"></i>
                             تحميل النسخة التجريبية
+                        </a>
+                        <a href="https://www.youtube.com/@%D8%AE%D8%A7%D9%84%D8%AF%D8%A7%D9%84%D9%86%D9%88%D9%8A%D8%B5%D8%B1%D9%8A" class="btn btn-secondary btn-lg" target="_blank">
+                            <i class="fab fa-youtube"></i>
+                            دروس تعليمية
                         </a>
                         <a href="https://wa.me/218928198656" class="btn btn-secondary btn-lg" target="_blank">
                             <i class="fab fa-whatsapp"></i>
@@ -208,23 +215,23 @@
             <div class="screenshots-slider">
                 <div class="slider-container">
                     <div class="slide active">
-                        <img src="1.png" alt="الواجهة الرئيسية">
+                        <img src="1.png" alt="الواجهة الرئيسية" class="screenshot-img">
                         <div class="slide-caption">الواجهة الرئيسية</div>
                     </div>
                     <div class="slide">
-                        <img src="2.png" alt="إدارة المشاريع">
+                        <img src="2.png" alt="إدارة المشاريع" class="screenshot-img">
                         <div class="slide-caption">إدارة المشاريع</div>
                     </div>
                     <div class="slide">
-                        <img src="4.png" alt="النظام المحاسبي">
+                        <img src="4.png" alt="النظام المحاسبي" class="screenshot-img">
                         <div class="slide-caption">النظام المحاسبي</div>
                     </div>
                     <div class="slide">
-                        <img src="5.png" alt="التقارير">
+                        <img src="5.png" alt="التقارير" class="screenshot-img">
                         <div class="slide-caption">التقارير والإحصائيات</div>
                     </div>
                     <div class="slide">
-                        <img src="6.png" alt="إدارة العملاء">
+                        <img src="6.png" alt="إدارة العملاء" class="screenshot-img">
                         <div class="slide-caption">إدارة العملاء</div>
                     </div>
                 </div>
@@ -502,6 +509,7 @@
                     <li><a href="#screenshots"><i class="fas fa-images"></i> الواجهات</a></li>
                     <li><a href="#pricing"><i class="fas fa-tag"></i> الأسعار</a></li>
                     <li><a href="#contact"><i class="fas fa-envelope"></i> تواصل معنا</a></li>
+                    <li><a href="https://www.youtube.com/@%D8%AE%D8%A7%D9%84%D8%AF%D8%A7%D9%84%D9%86%D9%88%D9%8A%D8%B5%D8%B1%D9%8A" target="_blank"><i class="fab fa-youtube"></i> دروس تعليمية</a></li>
                 </ul>
             </div>
             <div class="sidebar-section">
@@ -510,6 +518,13 @@
                    class="sidebar-btn btn-primary">
                     <i class="fas fa-download"></i>
                     تحميل النسخة التجريبية
+                </a>
+            </div>
+            <div class="sidebar-section">
+                <h4><i class="fas fa-graduation-cap"></i> دروس تعليمية</h4>
+                <a href="https://www.youtube.com/@%D8%AE%D8%A7%D9%84%D8%AF%D8%A7%D9%84%D9%86%D9%88%D9%8A%D8%B5%D8%B1%D9%8A" class="sidebar-btn btn-primary" target="_blank">
+                    <i class="fab fa-youtube"></i>
+                    شاهد الدروس على يوتيوب
                 </a>
             </div>
             <div class="sidebar-section">
@@ -528,6 +543,19 @@
 
     <!-- Sidebar Overlay -->
     <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Image Viewer Modal -->
+    <div class="image-viewer-modal" id="imageViewerModal">
+        <span class="image-viewer-close" id="imageViewerClose">&times;</span>
+        <button class="image-viewer-nav prev" id="imageViewerPrev">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+        <button class="image-viewer-nav next" id="imageViewerNext">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <img class="image-viewer-content" id="imageViewerImg">
+        <div class="image-viewer-caption" id="imageViewerCaption"></div>
+    </div>
 
     <script src="script.js"></script>
 </body>
