@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://etqa.github.io/engineer-system-updates/sitemap.xml
