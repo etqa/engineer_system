@@ -1511,6 +1511,12 @@ section {
         display: none !important;
     }
     
+    /* تقليل المسافة العلوية للـ hero عند إخفاء الشريط */
+    .hero {
+        padding-top: 1rem;
+        min-height: 100vh;
+    }
+    
     /* زر القائمة العائم في أعلى اليمين */
     .menu-toggle {
         display: flex;
