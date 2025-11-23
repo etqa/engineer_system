@@ -5,41 +5,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="منظومة المهندس - نظام محاسبي متكامل لإدارة المشاريع والمقاولات والعملاء والموظفين">
+        content="منظومة المهندس - الحل المتكامل لإدارة المشاريع الهندسية والمقاولات. نظام محاسبي دقيق، إدارة عملاء، وتقارير شاملة.">
     <meta name="keywords"
-        content="منظومة المهندس, نظام محاسبي, إدارة مشاريع, مقاولات, محاسبة, إدارة عملاء, إدارة موظفين, نظام مالي">
+        content="منظومة المهندس, نظام محاسبي, إدارة مشاريع, مقاولات, هندسة, إدارة عملاء, برمجيات هندسية">
     <meta name="author" content="منظومة المهندس">
     <meta name="robots" content="index, follow">
-    <meta name="language" content="Arabic">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://etqa.github.io/engineer-system-updates/">
-    <meta property="og:title" content="منظومة المهندس - نظام محاسبي متكامل">
-    <meta property="og:description"
-        content="حل شامل لإدارة المشاريع والمقاولات والعملاء والموظفين مع نظام محاسبي متقدم">
+    <meta property="og:title" content="منظومة المهندس - الحل المتكامل لإدارة المشاريع">
+    <meta property="og:description" content="نظام محاسبي وإداري متكامل مصمم خصيصاً لشركات المقاولات والمكاتب الهندسية.">
     <meta property="og:image" content="https://etqa.github.io/engineer-system-updates/icon.png">
-    <meta property="og:locale" content="ar_AR">
 
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://etqa.github.io/engineer-system-updates/">
-    <meta property="twitter:title" content="منظومة المهندس - نظام محاسبي متكامل">
-    <meta property="twitter:description"
-        content="حل شامل لإدارة المشاريع والمقاولات والعملاء والموظفين مع نظام محاسبي متقدم">
-    <meta property="twitter:image" content="https://etqa.github.io/engineer-system-updates/icon.png">
-
-    <!-- PWA -->
-    <meta name="theme-color" content="#2563eb">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="منظومة المهندس">
-    <link rel="manifest" href="manifest.json">
-
-    <title>منظومة المهندس - نظام محاسبي متكامل</title>
+    <title>منظومة المهندس | الحل المتكامل لإدارة المشاريع</title>
     <link rel="icon" type="image/png" href="icon.png">
-    <link rel="apple-touch-icon" href="icon.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -49,46 +36,41 @@
     <nav class="navbar" id="navbar">
         <div class="container">
             <div class="nav-content">
+                <a href="#" class="nav-logo">
+                    <img src="icon.png" alt="شعار منظومة المهندس">
+                    <span>منظومة المهندس</span>
+                </a>
+
                 <div class="nav-links" id="navLinks">
                     <a href="#home" class="nav-link active">الرئيسية</a>
                     <a href="#features" class="nav-link">المميزات</a>
                     <a href="#screenshots" class="nav-link">الواجهات</a>
                     <a href="#pricing" class="nav-link">الأسعار</a>
                     <a href="#contact" class="nav-link">تواصل معنا</a>
-                    <a href="https://www.youtube.com/@%D8%AE%D8%A7%D9%84%D8%AF%D8%A7%D9%84%D9%86%D9%88%D9%8A%D8%B5%D8%B1%D9%8A" class="nav-link" target="_blank">
-                        <i class="fab fa-youtube"></i> دروس تعليمية
-                    </a>
                 </div>
-                <div class="nav-actions">
-                    <button class="menu-toggle" id="menuToggle">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button>
-                </div>
+
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section class="hero" id="home">
-        <div class="hero-background">
-            <div class="hero-shape shape-1"></div>
-            <div class="hero-shape shape-2"></div>
-            <div class="hero-shape shape-3"></div>
-        </div>
         <div class="container">
-            <div class="hero-container">
+            <div class="hero-wrapper">
                 <div class="hero-content">
-                    <div class="hero-icon">
-                        <img src="icon.png" alt="منظومة المهندس">
+                    <div class="hero-badge">
+                        <i class="fas fa-check-circle"></i> الإصدار الجديد 2.0 متاح الآن
                     </div>
                     <h1 class="hero-title">
-                        <span class="title-line">منظومة المهندس</span>
-                        <span class="title-line">نظام محاسبي متكامل</span>
+                        الحل المتكامل لإدارة <br>
+                        <span>المشاريع الهندسية</span>
                     </h1>
                     <p class="hero-description">
-                        حل شامل لإدارة المشاريع والمقاولات والعملاء والموظفين مع نظام محاسبي متقدم
+                        نظام محاسبي وإداري شامل مصمم خصيصاً لشركات المقاولات والمكاتب الهندسية. دقة في الحسابات، سهولة
+                        في الإدارة، وتقارير احترافية تدعم اتخاذ القرار.
                     </p>
                     <div class="hero-buttons">
                         <a href="https://github.com/etqa/engineer-system-updates/releases/download/Setup_EngineerSystem1/Setup_EngineerSystem.zip"
@@ -96,35 +78,39 @@
                             <i class="fas fa-download"></i>
                             تحميل النسخة التجريبية
                         </a>
-                        <a href="https://www.youtube.com/@%D8%AE%D8%A7%D9%84%D8%AF%D8%A7%D9%84%D9%86%D9%88%D9%8A%D8%B5%D8%B1%D9%8A" class="btn btn-secondary btn-lg" target="_blank">
-                            <i class="fab fa-youtube"></i>
-                            دروس تعليمية
-                        </a>
-                        <a href="https://wa.me/218928198656" class="btn btn-secondary btn-lg" target="_blank">
-                            <i class="fab fa-whatsapp"></i>
-                            تواصل عبر واتساب
+                        <a href="#features" class="btn btn-secondary btn-lg">
+                            <i class="fas fa-info-circle"></i>
+                            اكتشف المميزات
                         </a>
                     </div>
-                    <div class="hero-stats">
-                        <div class="stat-item">
-                            <div class="stat-number">+100</div>
-                            <div class="stat-label">عميل راضٍ</div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="hero-img-container">
+                        <img src="1.png" alt="واجهة منظومة المهندس">
+                    </div>
+
+                    <!-- Floating Cards -->
+                    <div class="floating-card card-1">
+                        <div class="floating-icon icon-blue">
+                            <i class="fas fa-chart-pie"></i>
                         </div>
-                        <div class="stat-item">
-                            <div class="stat-number">+15</div>
-                            <div class="stat-label">وحدة متكاملة</div>
+                        <div class="floating-text">
+                            <h4>تقارير دقيقة</h4>
+                            <span>تحليل مالي شامل</span>
                         </div>
-                        <div class="stat-item">
-                            <div class="stat-number">24/7</div>
-                            <div class="stat-label">دعم فني</div>
+                    </div>
+
+                    <div class="floating-card card-2">
+                        <div class="floating-icon icon-green">
+                            <i class="fas fa-check-double"></i>
+                        </div>
+                        <div class="floating-text">
+                            <h4>إدارة سهلة</h4>
+                            <span>واجهة مستخدم بديهية</span>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="scroll-indicator">
-            <div class="mouse">
-                <div class="wheel"></div>
             </div>
         </div>
     </section>
@@ -133,73 +119,65 @@
     <section class="features" id="features">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">مميزات المنظومة</h2>
-                <p class="section-description">نظام متكامل يوفر لك كل ما تحتاجه لإدارة أعمالك بكفاءة</p>
+                <span class="section-subtitle">لماذا منظومة المهندس؟</span>
+                <h2 class="section-title">أدوات احترافية لإدارة أعمالك</h2>
+                <p class="section-description">مجموعة متكاملة من الأدوات المصممة لتلبية احتياجات المهندسين والمقاولين
+                </p>
             </div>
+
             <div class="features-grid">
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-project-diagram"></i>
                     </div>
                     <h3 class="feature-title">إدارة المشاريع</h3>
-                    <p class="feature-description">نظام متقدم لإدارة المشاريع والمقاولات مع متابعة دقيقة للتكاليف
-                        والإيرادات</p>
+                    <p class="feature-description">تتبع دقيق لكل مراحل المشروع، من التخطيط إلى التسليم، مع مراقبة
+                        التكاليف والإيرادات لحظة بلحظة.</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h3 class="feature-title">إدارة العملاء</h3>
-                    <p class="feature-description">قاعدة بيانات شاملة للعملاء مع سجل كامل للمعاملات والمستحقات</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-user-tie"></i>
-                    </div>
-                    <h3 class="feature-title">إدارة الموظفين</h3>
-                    <p class="feature-description">نظام متكامل لإدارة الموظفين والرواتب والحضور والانصراف</p>
-                </div>
+
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-calculator"></i>
                     </div>
-                    <h3 class="feature-title">النظام المحاسبي</h3>
-                    <p class="feature-description">نظام محاسبي متقدم مع تقارير مالية شاملة ودقيقة</p>
+                    <h3 class="feature-title">نظام محاسبي متقدم</h3>
+                    <p class="feature-description">قيود يومية، سندات قبض وصرف، وميزانية عمومية. نظام محاسبي متوافق مع
+                        المعايير المحاسبية.</p>
                 </div>
+
                 <div class="feature-card">
                     <div class="feature-icon">
-                        <i class="fas fa-truck"></i>
+                        <i class="fas fa-users"></i>
                     </div>
-                    <h3 class="feature-title">إدارة الموردين</h3>
-                    <p class="feature-description">متابعة الموردين والمشتريات والمدفوعات بشكل منظم</p>
+                    <h3 class="feature-title">إدارة العملاء والموردين</h3>
+                    <p class="feature-description">قاعدة بيانات شاملة لجميع الأطراف، مع كشوف حسابات تفصيلية ومتابعة
+                        الديون والمستحقات.</p>
                 </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-hard-hat"></i>
+                    </div>
+                    <h3 class="feature-title">شؤون الموظفين</h3>
+                    <p class="feature-description">إدارة الرواتب، السلف، الحضور والانصراف، وحساب تكلفة العمالة على كل
+                        مشروع بدقة.</p>
+                </div>
+
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-chart-line"></i>
                     </div>
-                    <h3 class="feature-title">التقارير والإحصائيات</h3>
-                    <p class="feature-description">تقارير تفصيلية ورسوم بيانية لمتابعة الأداء المالي</p>
+                    <h3 class="feature-title">تقارير ذكية</h3>
+                    <p class="feature-description">لوحة تحكم تفاعلية وتقارير تفصيلية تساعدك على فهم الوضع المالي واتخاذ
+                        القرارات الصحيحة.</p>
                 </div>
+
                 <div class="feature-card">
                     <div class="feature-icon">
-                        <i class="fas fa-money-bill-wave"></i>
+                        <i class="fas fa-shield-alt"></i>
                     </div>
-                    <h3 class="feature-title">إدارة المصروفات</h3>
-                    <p class="feature-description">تتبع دقيق لجميع المصروفات والنفقات مع التصنيف والتحليل</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-building"></i>
-                    </div>
-                    <h3 class="feature-title">إدارة العقارات</h3>
-                    <p class="feature-description">نظام متكامل لإدارة العقارات والأملاك والإيجارات</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <h3 class="feature-title">إدارة التدريب</h3>
-                    <p class="feature-description">نظام لإدارة الدورات التدريبية والمتدربين والشهادات</p>
+                    <h3 class="feature-title">أمان ونسخ احتياطي</h3>
+                    <p class="feature-description">نظام صلاحيات متقدم للمستخدمين، ونسخ احتياطي تلقائي لقاعدة البيانات
+                        لضمان سلامة بياناتك.</p>
                 </div>
             </div>
         </div>
@@ -209,38 +187,42 @@
     <section class="screenshots" id="screenshots">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">واجهات المنظومة</h2>
-                <p class="section-description">تصميم عصري وسهل الاستخدام</p>
+                <span class="section-subtitle">جولة في النظام</span>
+                <h2 class="section-title">واجهات عصرية وسهلة الاستخدام</h2>
+                <p class="section-description">تصميم يجمع بين البساطة والقوة لتوفير أفضل تجربة مستخدم</p>
             </div>
+
             <div class="screenshots-slider">
                 <div class="slider-container">
                     <div class="slide active">
                         <img src="1.png" alt="الواجهة الرئيسية" class="screenshot-img">
-                        <div class="slide-caption">الواجهة الرئيسية</div>
+                        <div class="slide-caption">لوحة التحكم الرئيسية - نظرة شاملة على أعمالك</div>
                     </div>
                     <div class="slide">
                         <img src="2.png" alt="إدارة المشاريع" class="screenshot-img">
-                        <div class="slide-caption">إدارة المشاريع</div>
+                        <div class="slide-caption">إدارة المشاريع - متابعة دقيقة لكل التفاصيل</div>
                     </div>
                     <div class="slide">
                         <img src="4.png" alt="النظام المحاسبي" class="screenshot-img">
-                        <div class="slide-caption">النظام المحاسبي</div>
+                        <div class="slide-caption">النظام المحاسبي - دقة في الأرقام</div>
                     </div>
                     <div class="slide">
                         <img src="5.png" alt="التقارير" class="screenshot-img">
-                        <div class="slide-caption">التقارير والإحصائيات</div>
+                        <div class="slide-caption">التقارير والإحصائيات - رؤية واضحة للأداء</div>
                     </div>
                     <div class="slide">
                         <img src="6.png" alt="إدارة العملاء" class="screenshot-img">
-                        <div class="slide-caption">إدارة العملاء</div>
+                        <div class="slide-caption">إدارة العملاء - تنظيم كامل للعلاقات</div>
                     </div>
                 </div>
+
                 <button class="slider-btn prev" id="prevBtn">
                     <i class="fas fa-chevron-right"></i>
                 </button>
                 <button class="slider-btn next" id="nextBtn">
                     <i class="fas fa-chevron-left"></i>
                 </button>
+
                 <div class="slider-dots" id="sliderDots"></div>
             </div>
         </div>
@@ -250,47 +232,40 @@
     <section class="pricing" id="pricing">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">باقات الأسعار</h2>
-                <p class="section-description">اختر الباقة المناسبة لاحتياجاتك</p>
+                <span class="section-subtitle">خطط الأسعار</span>
+                <h2 class="section-title">استثمار ذكي لمستقبل شركتك</h2>
+                <p class="section-description">اختر الباقة التي تناسب حجم أعمالك وابدأ في تنظيم مؤسستك اليوم</p>
             </div>
-            
+
             <div class="pricing-cards">
                 <!-- Trial Plan -->
-                <div class="pricing-card trial">
+                <div class="pricing-card">
                     <div class="pricing-header">
-                        <div class="pricing-icon">
-                            <i class="fas fa-gift"></i>
-                        </div>
-                        <h3 class="pricing-title">نسخة تجريبية</h3>
-                        <p class="pricing-subtitle">جرب المنظومة مجاناً</p>
+                        <h3 class="pricing-title">النسخة التجريبية</h3>
+                        <p class="pricing-subtitle">للتجربة والتقييم</p>
                     </div>
                     <div class="pricing-price">
-                        <span class="amount-free">مجاني</span>
-                        <span class="period">لمدة شهرين (60 يوم)</span>
+                        <span class="amount">مجاناً</span>
                     </div>
                     <ul class="pricing-features">
-                        <li><i class="fas fa-check"></i> كل الخصائص متاحة</li>
-                        <li><i class="fas fa-check"></i> عدد معاملات محدود</li>
-                        <li><i class="fas fa-check"></i> عدد موظفين محدود</li>
-                        <li class="disabled"><i class="fas fa-times"></i> النسخ الاحتياطي معطل</li>
-                        <li class="disabled"><i class="fas fa-times"></i> حماية بكلمة مرور معطلة</li>
-                        <li><i class="fas fa-info-circle"></i> مدة التجربة: 60 يوم</li>
+                        <li><i class="fas fa-check"></i> مدة تجربة 60 يوم</li>
+                        <li><i class="fas fa-check"></i> جميع الخصائص متاحة</li>
+                        <li><i class="fas fa-check"></i> عدد محدود من المعاملات</li>
+                        <li class="disabled"><i class="fas fa-times"></i> الدعم الفني المتقدم</li>
+                        <li class="disabled"><i class="fas fa-times"></i> النسخ الاحتياطي التلقائي</li>
                     </ul>
-                    <a href="https://github.com/etqa/engineer-system-updates/releases/download/Setup_EngineerSystem1/Setup_EngineerSystem.zip" class="btn btn-secondary btn-block" target="_blank">
-                        <i class="fas fa-download"></i>
-                        تحميل النسخة التجريبية
+                    <a href="https://github.com/etqa/engineer-system-updates/releases/download/Setup_EngineerSystem1/Setup_EngineerSystem.zip"
+                        class="btn btn-secondary btn-block">
+                        <i class="fas fa-download"></i> تحميل الآن
                     </a>
                 </div>
 
-                <!-- Annual Subscription (Popular) -->
+                <!-- Annual Subscription -->
                 <div class="pricing-card featured">
                     <div class="popular-badge">الأكثر طلباً</div>
                     <div class="pricing-header">
-                        <div class="pricing-icon">
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <h3 class="pricing-title">اشتراك سنوي</h3>
-                        <p class="pricing-subtitle">جميع المميزات لمدة سنة</p>
+                        <h3 class="pricing-title">الاشتراك السنوي</h3>
+                        <p class="pricing-subtitle">مرونة وتحديثات مستمرة</p>
                     </div>
                     <div class="pricing-price">
                         <span class="currency">د.ل</span>
@@ -298,76 +273,41 @@
                         <span class="period">/ سنوياً</span>
                     </div>
                     <ul class="pricing-features">
-                        <li><i class="fas fa-check"></i> كل الخصائص مفعلة</li>
-                        <li><i class="fas fa-check"></i> عدد معاملات غير محدود</li>
-                        <li><i class="fas fa-check"></i> عدد موظفين غير محدود</li>
-                        <li><i class="fas fa-check"></i> النسخ الاحتياطي مفعل</li>
-                        <li><i class="fas fa-check"></i> حماية بكلمة مرور</li>
-                        <li><i class="fas fa-check"></i> دعم فني طوال السنة</li>
-                        <li><i class="fas fa-check"></i> تحديثات مجانية</li>
-                        <li><i class="fas fa-check"></i> تجديد سنوي</li>
+                        <li><i class="fas fa-check"></i> استخدام كامل بلا حدود</li>
+                        <li><i class="fas fa-check"></i> تحديثات مجانية طوال السنة</li>
+                        <li><i class="fas fa-check"></i> دعم فني عبر الواتساب</li>
+                        <li><i class="fas fa-check"></i> نسخ احتياطي سحابي</li>
+                        <li><i class="fas fa-check"></i> تدريب أونلاين مجاني</li>
                     </ul>
-                    <a href="https://wa.me/218928198656?text=مرحباً، أريد الاشتراك السنوي بـ 450 دينار" class="btn btn-primary btn-block" target="_blank">
-                        <i class="fab fa-whatsapp"></i>
-                        اشترك الآن
+                    <a href="https://wa.me/218928198656?text=مرحباً، أريد الاشتراك السنوي بـ 450 دينار"
+                        class="btn btn-primary btn-block">
+                        <i class="fab fa-whatsapp"></i> اشترك الآن
                     </a>
                 </div>
 
                 <!-- Lifetime License -->
                 <div class="pricing-card">
                     <div class="pricing-header">
-                        <div class="pricing-icon">
-                            <i class="fas fa-infinity"></i>
-                        </div>
-                        <h3 class="pricing-title">نسخة دائمة</h3>
-                        <p class="pricing-subtitle">ملكية دائمة مدى الحياة</p>
+                        <h3 class="pricing-title">النسخة الدائمة</h3>
+                        <p class="pricing-subtitle">ادفع مرة واحدة، امتلك للأبد</p>
                     </div>
                     <div class="pricing-price">
                         <span class="currency">د.ل</span>
                         <span class="amount">1,400</span>
-                        <span class="period">/ دفعة واحدة</span>
+                        <span class="period">/ مدى الحياة</span>
                     </div>
                     <ul class="pricing-features">
-                        <li><i class="fas fa-check"></i> كل الخصائص مفعلة</li>
-                        <li><i class="fas fa-check"></i> استخدام دائم مدى الحياة</li>
-                        <li><i class="fas fa-check"></i> عدد معاملات غير محدود</li>
-                        <li><i class="fas fa-check"></i> عدد موظفين غير محدود</li>
+                        <li><i class="fas fa-check"></i> ترخيص مدى الحياة</li>
                         <li><i class="fas fa-check"></i> تحديثات إصلاح الأخطاء</li>
-                        <li><i class="fas fa-info-circle"></i> التحديثات الرئيسية بتكلفة إضافية</li>
-                        <li><i class="fas fa-check"></i> دعم فني مستمر</li>
+                        <li><i class="fas fa-check"></i> دعم فني لمدة عام</li>
+                        <li><i class="fas fa-check"></i> لا رسوم تجديد سنوية</li>
+                        <li><i class="fas fa-info-circle"></i> التحديثات الرئيسية بتكلفة رمزية</li>
                     </ul>
-                    <a href="https://wa.me/218928198656?text=مرحباً، أريد شراء النسخة الدائمة بـ 1400 دينار" class="btn btn-secondary btn-block" target="_blank">
-                        <i class="fab fa-whatsapp"></i>
-                        اشتري الآن
+                    <a href="https://wa.me/218928198656?text=مرحباً، أريد شراء النسخة الدائمة بـ 1400 دينار"
+                        class="btn btn-secondary btn-block">
+                        <i class="fab fa-whatsapp"></i> شراء النسخة
                     </a>
                 </div>
-            </div>
-
-            <div class="pricing-notes">
-                <div class="note-card">
-                    <i class="fas fa-download"></i>
-                    <p><strong>النسخة التجريبية:</strong> مجانية لمدة شهرين مع قيود بسيطة على عدد المعاملات والموظفين</p>
-                </div>
-                <div class="note-card">
-                    <i class="fas fa-sync-alt"></i>
-                    <p><strong>الاشتراك السنوي:</strong> يتجدد سنوياً ويشمل جميع التحديثات والدعم الفني</p>
-                </div>
-                <div class="note-card">
-                    <i class="fas fa-shield-alt"></i>
-                    <p><strong>النسخة الدائمة:</strong> ملكية دائمة مع تحديثات إصلاح الأخطاء، التحديثات الرئيسية بتكلفة إضافية</p>
-                </div>
-                <div class="note-card">
-                    <i class="fas fa-headset"></i>
-                    <p><strong>الدعم الفني:</strong> متاح على مدار الساعة عبر واتساب لجميع الباقات</p>
-                </div>
-            </div>
-
-            <div class="pricing-cta">
-                <p>هل تحتاج إلى باقة مخصصة؟ تواصل معنا للحصول على عرض خاص</p>
-                <a href="https://wa.me/218928198656" class="btn btn-primary btn-lg" target="_blank">
-                    <i class="fab fa-whatsapp"></i>
-                    تواصل معنا الآن
-                </a>
             </div>
         </div>
     </section>
@@ -376,9 +316,11 @@
     <section class="contact" id="contact">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">تواصل معنا</h2>
-                <p class="section-description">نحن هنا لمساعدتك في أي وقت</p>
+                <span class="section-subtitle">تواصل معنا</span>
+                <h2 class="section-title">نحن هنا لمساعدتك</h2>
+                <p class="section-description">فريق الدعم الفني جاهز للإجابة على استفساراتك ومساعدتك في البدء</p>
             </div>
+
             <div class="contact-content">
                 <div class="contact-info">
                     <div class="contact-item">
@@ -387,35 +329,40 @@
                         </div>
                         <div class="contact-details">
                             <h3>واتساب</h3>
+                            <p>تواصل مباشر وسريع مع فريق الدعم</p>
                             <a href="https://wa.me/218928198656" target="_blank">+218 92 819 8656</a>
                         </div>
                     </div>
+
                     <div class="contact-item">
                         <div class="contact-icon">
                             <i class="fab fa-github"></i>
                         </div>
                         <div class="contact-details">
                             <h3>GitHub</h3>
-                            <a href="https://github.com/etqa/engineer-system-updates" target="_blank">التحديثات
-                                والإصدارات</a>
+                            <p>تابع آخر التحديثات والإصدارات</p>
+                            <a href="https://github.com/etqa/engineer-system-updates"
+                                target="_blank">etqa/engineer-system-updates</a>
                         </div>
                     </div>
+
                     <div class="contact-item">
                         <div class="contact-icon">
-                            <i class="fas fa-download"></i>
+                            <i class="fab fa-youtube"></i>
                         </div>
                         <div class="contact-details">
-                            <h3>التحميل</h3>
-                            <a
-                                href="https://github.com/etqa/engineer-system-updates/releases/download/Setup_EngineerSystem1/Setup_EngineerSystem.zip">النسخة
-                                التجريبية</a>
+                            <h3>قناة اليوتيوب</h3>
+                            <p>شروحات ودروس تعليمية للنظام</p>
+                            <a href="https://www.youtube.com/@%D8%AE%D8%A7%D9%84%D8%AF%D8%A7%D9%84%D9%86%D9%88%D9%8A%D8%B5%D8%B1%D9%8A"
+                                target="_blank">شاهد الدروس</a>
                         </div>
                     </div>
                 </div>
+
                 <div class="contact-form-wrapper">
                     <form class="contact-form" id="contactForm">
                         <div class="form-group">
-                            <input type="text" class="form-input" placeholder="الاسم" required>
+                            <input type="text" class="form-input" placeholder="الاسم الكامل" required>
                         </div>
                         <div class="form-group">
                             <input type="email" class="form-input" placeholder="البريد الإلكتروني" required>
@@ -424,11 +371,10 @@
                             <input type="tel" class="form-input" placeholder="رقم الهاتف" required>
                         </div>
                         <div class="form-group">
-                            <textarea class="form-input" rows="5" placeholder="رسالتك" required></textarea>
+                            <textarea class="form-input" rows="5" placeholder="كيف يمكننا مساعدتك؟" required></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary btn-block">
-                            <i class="fas fa-paper-plane"></i>
-                            إرسال الرسالة
+                            <i class="fas fa-paper-plane"></i> إرسال الرسالة
                         </button>
                     </form>
                 </div>
@@ -446,36 +392,31 @@
                         <span>منظومة المهندس</span>
                     </div>
                     <p class="footer-description">
-                        نظام محاسبي متكامل لإدارة المشاريع والمقاولات بكفاءة واحترافية
+                        الخيار الأول لشركات المقاولات والمكاتب الهندسية في ليبيا. نظام يجمع بين الدقة المحاسبية وسهولة
+                        الاستخدام.
                     </p>
                 </div>
+
                 <div class="footer-section">
                     <h3 class="footer-title">روابط سريعة</h3>
                     <ul class="footer-links">
                         <li><a href="#home">الرئيسية</a></li>
                         <li><a href="#features">المميزات</a></li>
-                        <li><a href="#screenshots">الواجهات</a></li>
                         <li><a href="#pricing">الأسعار</a></li>
+                        <li><a href="#contact">تواصل معنا</a></li>
                     </ul>
                 </div>
+
                 <div class="footer-section">
-                    <h3 class="footer-title">تواصل معنا</h3>
+                    <h3 class="footer-title">الدعم والمساعدة</h3>
                     <ul class="footer-links">
-                        <li>
-                            <a href="https://wa.me/218928198656" target="_blank">
-                                <i class="fab fa-whatsapp"></i>
-                                واتساب
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://github.com/etqa/engineer-system-updates" target="_blank">
-                                <i class="fab fa-github"></i>
-                                GitHub
-                            </a>
-                        </li>
+                        <li><a href="https://wa.me/218928198656">مركز المساعدة</a></li>
+                        <li><a href="#">سياسة الخصوصية</a></li>
+                        <li><a href="#">شروط الاستخدام</a></li>
                     </ul>
                 </div>
             </div>
+
             <div class="footer-bottom">
                 <p>&copy; 2024 منظومة المهندس. جميع الحقوق محفوظة.</p>
             </div>
@@ -487,76 +428,7 @@
         <i class="fas fa-arrow-up"></i>
     </button>
 
-    <!-- Sidebar Toggle Button -->
-    <button class="sidebar-toggle" id="sidebarToggle">
-        <i class="fas fa-bars"></i>
-    </button>
-
-    <!-- Sidebar Panel -->
-    <div class="sidebar-panel" id="sidebarPanel">
-        <div class="sidebar-header">
-            <h3>القائمة الجانبية</h3>
-            <button class="sidebar-close" id="sidebarClose">
-                <i class="fas fa-times"></i>
-            </button>
-        </div>
-        <div class="sidebar-content">
-            <div class="sidebar-section">
-                <h4><i class="fas fa-link"></i> روابط سريعة</h4>
-                <ul class="sidebar-links">
-                    <li><a href="#home"><i class="fas fa-home"></i> الرئيسية</a></li>
-                    <li><a href="#features"><i class="fas fa-star"></i> المميزات</a></li>
-                    <li><a href="#screenshots"><i class="fas fa-images"></i> الواجهات</a></li>
-                    <li><a href="#pricing"><i class="fas fa-tag"></i> الأسعار</a></li>
-                    <li><a href="#contact"><i class="fas fa-envelope"></i> تواصل معنا</a></li>
-                    <li><a href="https://www.youtube.com/@%D8%AE%D8%A7%D9%84%D8%AF%D8%A7%D9%84%D9%86%D9%88%D9%8A%D8%B5%D8%B1%D9%8A" target="_blank"><i class="fab fa-youtube"></i> دروس تعليمية</a></li>
-                </ul>
-            </div>
-            <div class="sidebar-section">
-                <h4><i class="fas fa-download"></i> التحميل</h4>
-                <a href="https://github.com/etqa/engineer-system-updates/releases/download/Setup_EngineerSystem1/Setup_EngineerSystem.zip" 
-                   class="sidebar-btn btn-primary">
-                    <i class="fas fa-download"></i>
-                    تحميل النسخة التجريبية
-                </a>
-            </div>
-            <div class="sidebar-section">
-                <h4><i class="fas fa-graduation-cap"></i> دروس تعليمية</h4>
-                <a href="https://www.youtube.com/@%D8%AE%D8%A7%D9%84%D8%AF%D8%A7%D9%84%D9%86%D9%88%D9%8A%D8%B5%D8%B1%D9%8A" class="sidebar-btn btn-primary" target="_blank">
-                    <i class="fab fa-youtube"></i>
-                    شاهد الدروس على يوتيوب
-                </a>
-            </div>
-            <div class="sidebar-section">
-                <h4><i class="fas fa-phone"></i> تواصل معنا</h4>
-                <a href="https://wa.me/218928198656" class="sidebar-btn btn-secondary" target="_blank">
-                    <i class="fab fa-whatsapp"></i>
-                    واتساب
-                </a>
-                <a href="https://github.com/etqa/engineer-system-updates" class="sidebar-btn btn-secondary" target="_blank">
-                    <i class="fab fa-github"></i>
-                    GitHub
-                </a>
-            </div>
-        </div>
-    </div>
-
-    <!-- Sidebar Overlay -->
-    <div class="sidebar-overlay" id="sidebarOverlay"></div>
-
-    <!-- Image Viewer Modal -->
-    <div class="image-viewer-modal" id="imageViewerModal">
-        <span class="image-viewer-close" id="imageViewerClose">&times;</span>
-        <button class="image-viewer-nav prev" id="imageViewerPrev">
-            <i class="fas fa-chevron-right"></i>
-        </button>
-        <button class="image-viewer-nav next" id="imageViewerNext">
-            <i class="fas fa-chevron-left"></i>
-        </button>
-        <img class="image-viewer-content" id="imageViewerImg">
-        <div class="image-viewer-caption" id="imageViewerCaption"></div>
-    </div>
-
+    <!-- Scripts -->
     <script src="script.js"></script>
 </body>
 

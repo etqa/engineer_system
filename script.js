@@ -21,10 +21,10 @@ const scrollTop = document.getElementById('scrollTop');
 const handleScroll = throttle(() => {
     if (window.scrollY > 50) {
         navbar.classList.add('scrolled');
-        scrollTop.classList.add('visible');
+        scrollTop.classList.add('show');
     } else {
         navbar.classList.remove('scrolled');
-        scrollTop.classList.remove('visible');
+        scrollTop.classList.remove('show');
     }
 }, 100);
 
@@ -37,6 +37,16 @@ const navLinks = document.getElementById('navLinks');
 menuToggle.addEventListener('click', () => {
     menuToggle.classList.toggle('active');
     navLinks.classList.toggle('active');
+
+    // Toggle menu icon
+    const icon = menuToggle.querySelector('i');
+    if (navLinks.classList.contains('active')) {
+        icon.classList.remove('fa-bars');
+        icon.classList.add('fa-times');
+    } else {
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+    }
 });
 
 // Close menu when clicking on a link
@@ -44,8 +54,25 @@ document.querySelectorAll('.nav-link').forEach(link => {
     link.addEventListener('click', () => {
         menuToggle.classList.remove('active');
         navLinks.classList.remove('active');
+        const icon = menuToggle.querySelector('i');
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
     });
 });
+
+// Close menu when clicking outside
+document.addEventListener('click', (e) => {
+    if (navLinks.classList.contains('active') &&
+        !navLinks.contains(e.target) &&
+        !menuToggle.contains(e.target)) {
+        menuToggle.classList.remove('active');
+        navLinks.classList.remove('active');
+        const icon = menuToggle.querySelector('i');
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+    }
+});
+
 
 // ===== Active Navigation Link =====
 const sections = document.querySelectorAll('section');
@@ -53,15 +80,15 @@ const navLinksAll = document.querySelectorAll('.nav-link');
 
 const updateActiveLink = throttle(() => {
     let current = '';
-    
+
     sections.forEach(section => {
         const sectionTop = section.offsetTop;
-        
+
         if (window.scrollY >= sectionTop - 100) {
             current = section.getAttribute('id');
         }
     });
-    
+
     navLinksAll.forEach(link => {
         link.classList.remove('active');
         if (link.getAttribute('href') === `#${current}`) {
@@ -80,7 +107,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
-        
+
         if (target) {
             const offsetTop = target.offsetTop - 70;
             window.scrollTo({
@@ -121,10 +148,10 @@ const dots = document.querySelectorAll('.dot');
 function showSlide(n) {
     slides.forEach(slide => slide.classList.remove('active'));
     dots.forEach(dot => dot.classList.remove('active'));
-    
+
     if (n >= slides.length) currentSlide = 0;
     if (n < 0) currentSlide = slides.length - 1;
-    
+
     slides[currentSlide].classList.add('active');
     dots[currentSlide].classList.add('active');
 }
@@ -165,25 +192,25 @@ const contactForm = document.getElementById('contactForm');
 
 contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    
+
     // Get form data
     const name = contactForm.querySelector('input[type="text"]').value;
     const email = contactForm.querySelector('input[type="email"]').value;
     const phone = contactForm.querySelector('input[type="tel"]').value;
     const message = contactForm.querySelector('textarea').value;
-    
+
     // Create WhatsApp message
     const whatsappMessage = `مرحباً، أنا ${name}%0A` +
-                           `البريد الإلكتروني: ${email}%0A` +
-                           `رقم الهاتف: ${phone}%0A` +
-                           `الرسالة: ${message}`;
-    
+        `البريد الإلكتروني: ${email}%0A` +
+        `رقم الهاتف: ${phone}%0A` +
+        `الرسالة: ${message}`;
+
     // Open WhatsApp
     window.open(`https://wa.me/218928198656?text=${whatsappMessage}`, '_blank');
-    
+
     // Reset form
     contactForm.reset();
-    
+
     // Show success message
     alert('شكراً لتواصلك معنا! سيتم فتح واتساب لإرسال رسالتك.');
 });
@@ -234,13 +261,13 @@ if (!isMobile) {
     const parallaxEffect = throttle(() => {
         const scrolled = window.scrollY;
         const heroShapes = document.querySelectorAll('.hero-shape');
-        
+
         heroShapes.forEach((shape, index) => {
             const speed = (index + 1) * 0.5;
             shape.style.transform = `translateY(${scrolled * speed}px)`;
         });
     }, 100);
-    
+
     window.addEventListener('scroll', parallaxEffect, { passive: true });
 }
 
@@ -290,7 +317,7 @@ function handleSwipe() {
 
 // ===== Dynamic Year in Footer =====
 const currentYear = new Date().getFullYear();
-document.querySelector('.footer-bottom p').innerHTML = 
+document.querySelector('.footer-bottom p').innerHTML =
     `&copy; ${currentYear} منظومة المهندس. جميع الحقوق محفوظة.`;
 
 // ===== Lazy Loading Images =====
@@ -305,7 +332,7 @@ if ('IntersectionObserver' in window) {
             }
         });
     });
-    
+
     document.querySelectorAll('img').forEach(img => {
         imageObserver.observe(img);
     });
@@ -322,20 +349,20 @@ document.querySelectorAll('img').forEach(img => {
 // ===== Add Ripple Effect to Buttons (Disabled on Mobile for Performance) =====
 if (!isMobile) {
     document.querySelectorAll('.btn').forEach(button => {
-        button.addEventListener('click', function(e) {
+        button.addEventListener('click', function (e) {
             const ripple = document.createElement('span');
             const rect = this.getBoundingClientRect();
             const size = Math.max(rect.width, rect.height);
             const x = e.clientX - rect.left - size / 2;
             const y = e.clientY - rect.top - size / 2;
-            
+
             ripple.style.width = ripple.style.height = size + 'px';
             ripple.style.left = x + 'px';
             ripple.style.top = y + 'px';
             ripple.classList.add('ripple');
-            
+
             this.appendChild(ripple);
-            
+
             setTimeout(() => {
                 ripple.remove();
             }, 600);
@@ -424,7 +451,7 @@ const screenshotImages = document.querySelectorAll('.screenshot-img');
 
 // فتح عارض الصور عند الضغط على أي صورة في الواجهات
 screenshotImages.forEach((img, index) => {
-    img.addEventListener('click', function() {
+    img.addEventListener('click', function () {
         currentImageIndex = index;
         openImageViewer(this);
     });
@@ -444,27 +471,27 @@ imageViewerClose.addEventListener('click', closeImageViewer);
 const imageViewerPrev = document.getElementById('imageViewerPrev');
 const imageViewerNext = document.getElementById('imageViewerNext');
 
-imageViewerPrev.addEventListener('click', function(e) {
+imageViewerPrev.addEventListener('click', function (e) {
     e.stopPropagation();
     currentImageIndex = (currentImageIndex - 1 + screenshotImages.length) % screenshotImages.length;
     openImageViewer(screenshotImages[currentImageIndex]);
 });
 
-imageViewerNext.addEventListener('click', function(e) {
+imageViewerNext.addEventListener('click', function (e) {
     e.stopPropagation();
     currentImageIndex = (currentImageIndex + 1) % screenshotImages.length;
     openImageViewer(screenshotImages[currentImageIndex]);
 });
 
 // إغلاق عند الضغط خارج الصورة
-imageViewerModal.addEventListener('click', function(e) {
+imageViewerModal.addEventListener('click', function (e) {
     if (e.target === imageViewerModal) {
         closeImageViewer();
     }
 });
 
 // التنقل بين الصور والإغلاق بزر Escape
-document.addEventListener('keydown', function(e) {
+document.addEventListener('keydown', function (e) {
     if (imageViewerModal.classList.contains('active')) {
         if (e.key === 'Escape') {
             closeImageViewer();
